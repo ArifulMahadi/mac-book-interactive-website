@@ -79,12 +79,12 @@ document.getElementById('free-delivery').addEventListener('click',function(){
  })
 
 //  add promo Code
-const codeButton = document.getElementById("promo-button")
-const codeInput = document.getElementById("promo-code")
+const grandTotal = document.getElementById('final-total')
 
-
-
-
-codeButton.addEventListener('click', function(){
-    
+document.getElementById("promo-code").addEventListener('keyup', function(event){
+    if(event.target.value== 'stevekaku'){
+        
+        
+    }
 })
+

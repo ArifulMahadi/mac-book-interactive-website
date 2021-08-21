@@ -25,18 +25,18 @@ function deliveryCharge(deliveryId,isAdd){
 }
 // for total price
 function updateTotal(){
-    const memoryCost=document.getElementById('memory-cost');
-    const memoryCostText=parseInt(memoryCost.innerText);
-    const deliveryCost=document.getElementById('delivery-charge');
-    const deliveryCostText=parseInt(deliveryCost.innerText);
-    const storageCost=document.getElementById('storage-cost');
+    const memoryCost = document.getElementById('memory-cost');
+    const memoryCostText = parseInt(memoryCost.innerText);
+    const deliveryCost = document.getElementById('delivery-charge');
+    const deliveryCostText = parseInt(deliveryCost.innerText);
+    const storageCost = document.getElementById('storage-cost');
     const storageCostText=parseInt(storageCost.innerText);
-    const total=1299+memoryCostText+deliveryCostText+storageCostText;
-    const update=document.getElementById('total-price');
-    update.innerText=total;
+    const total = 1299 + memoryCostText + deliveryCostText + storageCostText;
+    const update = document.getElementById('total-price');
+    update.innerText = total;
     // final total for everything
-    const finalTotal=document.getElementById('final-total');
-    finalTotal.innerText=total;
+    const finalTotal = document.getElementById('final-total');
+    finalTotal.innerText = total;
     
 }
 // event handler for Extra memory cost 
@@ -77,14 +77,15 @@ document.getElementById('free-delivery').addEventListener('click',function(){
     updateTotal();
     
  })
-
-// //  add promo Code
-// const grandTotal = document.getElementById('final-total')
-
-// document.getElementById("promo-code").addEventListener('keyup', function(event){
-//     if(event.target.value== 'stevekaku'){
-        
-        
-//     }
-// })
-
+    //  promo code input
+document.getElementById("promo-button").addEventListener('click',function(){
+    const finalTotal=document.getElementById("final-total");  
+    const inputField=document.getElementById("code-text");
+    const inputFieldText=inputField.value;
+    const totalPrice=document.getElementById('total-price');
+    const totalAmmount=parseInt(totalPrice.innerText);
+    inputField.value='';
+    if(inputFieldText=='stevekaku'){
+         finalTotal.innerText  =(totalAmmount*80)/100
+     }   
+})

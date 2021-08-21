@@ -78,13 +78,13 @@ document.getElementById('free-delivery').addEventListener('click',function(){
     
  })
 
-//  add promo Code
-const grandTotal = document.getElementById('final-total')
+// //  add promo Code
+// const grandTotal = document.getElementById('final-total')
 
-document.getElementById("promo-code").addEventListener('keyup', function(event){
-    if(event.target.value== 'stevekaku'){
+// document.getElementById("promo-code").addEventListener('keyup', function(event){
+//     if(event.target.value== 'stevekaku'){
         
         
-    }
-})
+//     }
+// })
 
